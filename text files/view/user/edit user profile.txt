@@ -1,0 +1,136 @@
+<div class="main-content">
+        <section class="section">
+          <h1 class="section-header">
+            <div>Edit Profile</div>
+          </h1>
+          
+        <!-- row -->
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-muted">Edit Profile</h4>
+
+                    </div>
+                    <div class="card-body">
+                <form action="<?php echo base_url();?>homecontroller/addUser/create" method="post" enctype="multipart/form-data">
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label for="frist_name">First Name</label>
+                      <input  type="text" class="form-control" name="f_name" autofocus>
+                        </div>
+                    <div class="form-group col-6">
+                      <label for="last_name">Last Name</label>
+                      <input  type="text" class="form-control" name="l_name">
+                       </div>
+                  </div>
+
+                  <div class="row">
+                  <div class="form-group col-6">
+                    <label for="email">Email</label>
+                    <input  type="email" class="form-control" name="email">
+                      </div>
+
+                    <div class="form-group col-6">
+                      <label>Gender</label>
+                      <select class="form-control" name="gender" required >
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                      </div>
+                   </div>
+
+                   <div class="form-divider">
+                    Your Home
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label>Country</label>
+                      <select class="form-control" name="country">
+                        <option>USA</option>
+                        <option>Nigeria</option>
+                        <option>France</option>  
+                      </select>
+                      </div>
+                    <div class="form-group col-6">
+                      <label>City</label>
+                      <select class="form-control" name="city" required >
+                        <option value="New York">New York</option>
+                        <option value="Abakaliki">Abakaliki</option>
+                        <option value="Paris">Paris</option>
+                      </select>
+                   
+                    </div>
+                  </div>
+                 <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                     Update Profile
+                    </button>
+                  </div>
+                </form>
+              </div>
+                </div>
+            </div>
+        </div>
+
+
+         <!-- row -->
+         <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-muted">Edit Password</h4>
+                      </div>
+                    <div class="card-body">
+                 <form action="<?php echo base_url();?>homecontroller/addUser/create" method="post" enctype="multipart/form-data">
+                 
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label for="password" class="d-block">New Password</label>
+                      <input  type="password" class="form-control" name="password">
+                      </div>
+                    <div class="form-group col-6">
+                      <label for="password2" class="d-block">Password Confirmation</label>
+                      <input  type="password" class="form-control" name="confirm_password">
+                       </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                     Update Password
+                    </button>
+                  </div>
+                </form>
+              </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-muted">Change Avatar</h4>
+
+                    </div>
+                    <div class="card-body">
+                <form action="<?php echo base_url();?>homecontroller/addUser/create" method="post" enctype="multipart/form-data">
+                 
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label for="image" class="d-block">Upload Image</label>
+                      <input  type="file" class="form-control" name="userFile">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                     Update Photo
+                    </button>
+                  </div>
+                </form>
+              </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+      </div>

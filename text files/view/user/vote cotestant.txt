@@ -1,0 +1,40 @@
+<div class="main-content">
+        <section class="section">
+          <h1 class="section-header">
+            <div>Vote Contestant</div>
+          </h1>
+          
+        <!-- row -->
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-muted">Vote Contestant</h4>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form method="post" action="<?php echo base_url();?>payment/Pay/add_to_wallet">
+                                <div class="form-group">
+                                    <label for="">Vote Amount</label>
+                                    <input type="number" name="amount" class="form-control input-rounded" placeholder="Enter Amount">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class=""> Payment Method</label>
+                                    <select name="payment_method" id="" class="form-control">
+                                        <option value="paystack">Paystack</option>
+                                        <option value="paypal">Paypal</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Proceed" class="btn btn-primary btn-block btn-rounded">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+      </div>

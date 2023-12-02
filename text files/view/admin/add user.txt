@@ -1,0 +1,91 @@
+<div class="main-content">
+        <section class="section">
+          <h1 class="section-header">
+            <div>Add User</div>
+          </h1>
+
+<div class="card card-primary">
+              <div class="card-header"><h4>Add User</h4></div>
+              
+              <div class="card-body">
+                <form action="" method="post" enctype="multipart/form-data">
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label for="frist_name">First Name</label>
+                      <input  type="text" class="form-control" name="f_name" autofocus>
+                       </div>
+                    <div class="form-group col-6">
+                      <label for="last_name">Last Name</label>
+                      <input  type="text" class="form-control" name="l_name">
+                       </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input  type="email" class="form-control" name="email">
+                      </div>
+
+                  <div class="row">
+                    <div class="form-group col-12">
+                      <label for="password" class="d-block">Password</label>
+                      <input  type="password" class="form-control" name="password">
+                      </div>
+                    
+                  </div>
+
+                  <div class="form-divider">
+                    Your Home
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label>Country</label>
+                      <select class="form-control" name="country">
+                        <option value="USA">USA</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="France">France</option>  
+                      </select>
+                      </div>
+                    <div class="form-group col-6">
+                      <label>City</label>
+                      <select class="form-control" name="city" required >
+                        <option value="New York">New York</option>
+                        <option value="Abakaliki">Abakaliki</option>
+                        <option value="Paris">Paris</option>
+                      </select>
+                   
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label>Gender</label>
+                      <select class="form-control" name="gender" required >
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                     
+                    </div>
+                    <div class="form-group col-6">
+                      <label>Profile Image</label>
+                      <input type="file" name="userFile" class="form-control" required>
+                  
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" name="agree" class="custom-control-input" id="agree">
+                      <label class="custom-control-label" for="agree">I agree with the terms and conditions</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+</section>
+</div>

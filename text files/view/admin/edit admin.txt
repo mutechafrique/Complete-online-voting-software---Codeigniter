@@ -1,0 +1,68 @@
+<div class="main-content">
+        <section class="section">
+          <h1 class="section-header">
+            <div>Edit Admin</div>
+          </h1>
+
+            <?php $order = 1;
+            $admins = $this->db->get_where('admin', array('admin_id' => $admin_id))->result_array();
+            foreach($admins as $admin):?>
+            <?php endforeach;?>
+            <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                        <div class="card">
+                        <?php if($this->session->flashdata('message')){?>
+                        <div class="alert alert-success text-center">
+                        <?php echo $this->session->flashdata('message');?>
+                        </div>
+                        <?php unset($_SESSION['message']);
+
+                        }?>
+                            <div class="card-header">
+                                <h4 class="card-title">Update Admin</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="basic-form">
+                                    <form action="<?php echo base_url();?>auth_admin/manageUsers/update/<?php echo $admin['admin_id'];?>" method="post" enctype="multipart/form-data">
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>First Name</label>
+                                                <input type="text" name="f_name" value="<?php echo $admin['f_name'];?>" class="form-control" placeholder="First name">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Last Name</label>
+                                                <input type="text" name="l_name" value="<?php echo $admin['l_name'];?>" class="form-control" placeholder="Last name">
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label>Email</label>
+                                                <input type="email" name="auth_email" value="<?php echo $admin['auth_email'];?>" class="form-control" placeholder="Email">
+                                            </div>
+                                            
+                                            </div>
+
+                                        <div class="form-row">
+                                       
+                                            <div class="form-group col-md-4">
+                                                <label>Gender</label>
+                                                <select id="inputState" name="gender" class="form-control default-select">
+                                                <option value="Male"<?php if($admin['gender'] == 'Male') echo 'selected="selected"';?>>Male</option>
+                                                <option value="Female"<?php if($admin['gender'] == 'Female') echo 'selected="selected"';?>>Female</option>
+                                                </select>
+                                            </div>
+                                             <div class="form-group col-md-4">
+                                                <label>Profile Image</label>
+                                                <input type="file" name="userFile" class="form-control">
+                                                <img class="rounded-circle" width="100" src="<?php echo base_url();?>uploads/admin_image/<?php echo $admin['admin_id'] . '.jpg';?>" alt="">
+                                            </div>
+                                        </div>
+                                       
+                                        <button type="submit" class="btn btn-primary btn-block btn-rounded">Update</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+                    </section>
+                    </div>

@@ -1,0 +1,123 @@
+
+<div class="main-content">
+        <section class="section">
+          <h1 class="section-header">
+            <div>Edit Profile</div>
+          </h1>
+          
+        <!-- row -->
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-muted">Edit Profile</h4>
+
+                    </div>
+                    <div class="card-body">
+                    <?php if($this->session->flashdata('message')){?>
+                    <div class="alert alert-success text-center">
+                    <?php echo $this->session->flashdata('message');?>
+                    </div>
+                    <?php unset($_SESSION['message']);
+
+                    }?>
+                <form action="" method="post" enctype="multipart/form-data">
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label for="frist_name">First Name</label>
+                      <input  type="text" class="form-control" name="f_name" value="">
+                        </div>
+                    <div class="form-group col-6">
+                      <label for="last_name">Last Name</label>
+                      <input  type="text" class="form-control" name="l_name" value="">
+                       </div>
+                  </div>
+
+                  <div class="row">
+                  <div class="form-group col-6">
+                    <label for="email">Email</label>
+                    <input  type="email" class="form-control" name="auth_email"  value="">
+                      </div>
+
+                    <div class="form-group col-6">
+                      <label>Gender</label>
+                      <select class="form-control" name="gender" required >
+                        <option value=">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                      </div>
+                   </div>
+  
+                 <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                     Update Profile
+                    </button>
+                  </div>
+                </form>
+              </div>
+                </div>
+            </div>
+        </div>
+
+
+         <!-- row -->
+         <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-muted">Edit Password</h4>
+                      </div>
+                    <div class="card-body">
+                 <form action="<?php echo base_url();?>auth_user/userAccount/changePassword/<?php echo $admin['user_id'];?>" method="post" enctype="multipart/form-data">
+                 
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label for="password" class="d-block">New Password</label>
+                      <input  type="password" class="form-control" name="password">
+                      </div>
+                    <div class="form-group col-6">
+                      <label for="password2" class="d-block">Password Confirmation</label>
+                      <input  type="password" class="form-control" name="conf_pass">
+                       </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                     Update Password
+                    </button>
+                  </div>
+                </form>
+              </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-muted">Change Avatar</h4>
+
+                    </div>
+                    <div class="card-body">
+                <form action="<?php echo base_url();?>auth_user/userAccount/change_avatar/<?php echo $admin['user_id'];?>" method="post" enctype="multipart/form-data">
+                 
+                  <div class="row">
+                    <div class="form-group col-6">
+                      <label for="image" class="d-block">Upload Image</label>
+                      <input  type="file" class="form-control" name="userFile">
+                      <img alt="image" class="rounded-circle" src="<?php echo base_url();?>uploads/user_image/<?php echo $admin['user_id'] . '.jpg';?>">
+                   </div>
+                     </div>
+
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                     Update Photo
+                    </button>
+                  </div>
+                </form>
+              </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+      </div>
